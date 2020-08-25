@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CovidSummary from "./components/CovidSummary";
+import SearchData from "./components/SearchData";
+
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h2 className="my-4 text-center">Covid-19 Summary Data</h2>
+      <Row>
+        <Col sm={3}>
+          <h4 className="my-4 text-center">Search Data</h4>
+          <SearchData />
+        </Col>
+        <Col sm={9}>
+          <CovidSummary />
+        </Col>
+      </Row>
     </div>
   );
 }
